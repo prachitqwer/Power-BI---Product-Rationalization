@@ -1,0 +1,51 @@
+DAX used:
+
+-------------------------------------------------------------------
+Calendar Table:
+
+Calendar_Table = 
+//Calculate Start Date
+var start_date = MIN(Sales_Table[OrderDate])
+
+//Calculate End Date
+var end_date = MAX(Sales_Table[OrderDate])
+
+RETURN
+    // Create a dynamic calendar table
+    CALENDAR ( start_date, end_date)
+
+-------------------------------------------------------------------
+
+
+-------------------------------------------------------------------
+Creating new columns:
+
+Product Margin = 
+var margin = CALCULATE(SUM('Sales Table'[SalesAmount]) - SUM('Sales Table'[TotalProductCost]) - SUM('Sales Table'[TaxAmt]))
+RETURN
+IF(margin = 0, 0, margin)
+
+Sales Rank = 
+var bike_found = SEARCH("Bike", 'Product Category'[Product Category],1,0)
+RETURN
+IF(bike_found =1, RANK.EQ('Product Category'[Product Sales], 'Product Category'[Product Sales], DESC), -1)
+
+Margin Percentage = DIVIDE('Product Category'[Product Margin],'Product Category'[Product Sales],  0)
+
+Margin Rank = 
+var bike_found = SEARCH("Bike", 'Product Category'[Product Category],1,0)
+RETURN
+IF(bike_found =1, RANK.EQ('Product Category'[Margin Percentage], 'Product Category'[Margin Percentage], DESC), -1)
+
+Cumulative Rank = 
+IF(OR('Product Category'[Sales Rank] = -1, 'Product Category'[Margin Rank] = -1) = FALSE, 'Product Category'[Sales Rank] * 'Product Category'[Margin Rank], -1)
+
+Sales Contributor Category = 
+SWITCH(TRUE(),
+'Product Category'[Sales Rank] = -1, "NA",
+'Product Category'[Sales Rank] <= 25, "Top Contributor",
+'Product Category'[Sales Rank] >= 75, "Bottom Contributor",
+"Middle Contributor"
+)
+
+-------------------------------------------------------------------
