@@ -1,0 +1,10 @@
+SQL Query to fetch data from Internet Sales table:
+
+SELECT 
+      [CustomerKey]
+      ,[OrderQuantity]
+      ,[UnitPrice]
+      ,[DiscountAmount]
+      ,[CustomerPONumber]
+      ,[OrderDate]
+  FROM [AdventureWorksDW2019].[dbo].[FactInternetSales]
