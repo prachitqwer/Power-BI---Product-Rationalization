@@ -94,8 +94,10 @@ To be able to use all three tables, relationships must be defined across them. C
 # **Creating visualizations**
 
 ***1.	Slicers to choose from Products and Product Categories*** : "ProductName" and "ProductCategory" columns are used in slicers.<br />
-![image](https://user-images.githubusercontent.com/114446174/193915981-842a40f4-6a21-44e8-9ef8-a78079da122f.png)
-![image](https://user-images.githubusercontent.com/114446174/193916003-4386089a-bd85-4bd2-8caa-b41968928f15.png)
+![image](https://user-images.githubusercontent.com/114446174/193920450-6177d707-5c16-41a9-97ba-4cdd51de1d79.png)
+
+![image](https://user-images.githubusercontent.com/114446174/193920517-79ce77fd-8054-4e80-8dfc-231abb27755c.png)
+
 
 ***2.	Card - Total Sales card*** : "Product Sales" columns is used in card.<br />
 
@@ -117,15 +119,16 @@ IF(margin = 0, 0, margin)
 ![image](https://user-images.githubusercontent.com/114446174/193917664-440e7eb5-e129-4026-aa75-e85b9e7ba5aa.png)
 
 Further two new columns called Margin Percentage and Margin Rank are created as shown below. <br />
-![image](https://user-images.githubusercontent.com/114446174/193917722-090d8b03-ebf2-447d-a5bb-03d2d64cee25.png)
-![image](https://user-images.githubusercontent.com/114446174/193917733-38f8c2c8-1ff9-4823-98c2-2f403d7cf6dd.png)
+![image](https://user-images.githubusercontent.com/114446174/193921000-d612446c-b4b5-41cb-8c8b-1ef8159753db.png)
+![image](https://user-images.githubusercontent.com/114446174/193920891-aa8c39a8-cdc9-4401-8ef8-792e178f8441.png)
 
 Now to combine the Sales rank and Margin rank, another new column called Cumulative Rank is created as shown below <br />
-![image](https://user-images.githubusercontent.com/114446174/193918870-ded34907-2679-4a4e-a21a-f644be75b005.png)
+![image](https://user-images.githubusercontent.com/114446174/193920742-1829899e-8bc1-4fcc-88ac-40997e04f857.png)
 
 Top N filter is used to display product with high sales, high margin as well as product with low sales, low margin. <br />
-![image](https://user-images.githubusercontent.com/114446174/193918103-c8024b91-bd40-4f72-81dc-d64f80defd85.png)
-![image](https://user-images.githubusercontent.com/114446174/193918303-45a17bf7-5d0a-42b8-9b24-1c08e1aabb28.png)
+![image](https://user-images.githubusercontent.com/114446174/193921261-eb1d3e4c-ba87-4231-83d3-d5688fa22994.png)
+![image](https://user-images.githubusercontent.com/114446174/193921387-8b3f67d2-eaa4-4d91-83c5-0c777bed637c.png)
+
 
 DAX code available below <br />
 
@@ -177,6 +180,6 @@ SWITCH(TRUE(),
 ![image](https://user-images.githubusercontent.com/114446174/193920044-1d38eb16-5f7e-4e03-84ca-3e4822b1be53.png)
 
 # **Conclusion**
-1. Out of 150 models, the first 25 products by sales generate nearly 60% of the sales for the company. Based on the data, the “Road 150 Red 48” is the best-selling product for the company. It generated $1.2 Mn in sales and $0.3 Mn in profit.
-2. 50 products fall in bottom contributor category that generate less than 5% of the sales. The “Mountain 300 Black 38” is product that is generating low sales and low margin. Recommendation is to consider retiring the product. In case there is inventory of this product, the company may decide to run special discount offers to sell if off quickly.
-3. Products in Middle Contributor category generate 36% of the sales. The details of these products are shared with sales and marketing teams. Recommendation is to identify factors that are working well in case of Top contributors and replicate those to Middle contributors
+1. Out of 150 models, the **first 25 products** by sales generate nearly **60% of the sales** for the company. Based on the data, the “**Road 150 Red 48” is the best-selling product** of the company. It generated $1.2 Mn in sales and $0.3 Mn in profit.
+2. 50 products fall in bottom contributor category that generate **less than 5% of the sales**. The “**Mountain 300 Black 38**” is product that is generating **low sales and low margin**. Recommendation is to **consider retiring the product**. In case there is inventory of this product, the company may decide to run special discount offers to sell if off quickly.
+3. Products in **Middle Contributor** category **generate 36% of the sales**. The details of these products are shared with sales and marketing teams. Recommendation is to identify factors that are working well in case of Top contributors and replicate those to Middle contributors
