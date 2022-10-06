@@ -3,13 +3,13 @@
 # Power-BI-Product-Rationalization
 
 ## **Business Context**
-An American bike company called Pro Bikes Inc. has two primary sales channels. Those are physical stores and online stores. Within the online channel, the company sells bikes from its own website and from other popular online platforms. The company sells various bikes and bike accessories such as helmets, tires, knee pads, water bottles, etc.  
+An American bike company called Pro Bikes Inc. has two primary sales channels. These are the physical stores and online stores. Within the online channel, the company sells bikes from its own website and from other popular online platforms. The company sells various bikes and bike accessories such as helmets, tires, knee pads, water bottles, etc.  
 
 ## **Problem statement**
-The company 3 brands of bikes. Each brand has multiple sizes, colors and related varieties. All put together the company sells 125 unique bikes. Managing such high number of SKUs (stock keeping units) is associated with cost in form of inventory technology. The management wants to conduct a product rationalization exercise to fine tune its product portfolio. It has assigned the responsibility to its lead business analyst.
+The company has three brands of bikes and each brand has multiple sizes, colors and related varieties. In total, the company sells 125 unique bikes. Managing such a high number of SKUs (stock keeping units) is associated with cost in form of inventory technology. The management wants to conduct a product rationalization exercise to fine tune its product portfolio. It has assigned the responsibility to its lead business analyst.
 
 ## **Business Analysis**
-As a business analyst, I’ve defined the scope of the exercise. It includes creating a mechanism to identify products that make financial sense for the company and identify the ones that do not make financial sense. I’ve made three buckets in which products need to be categorized. The purpose bucketing products is to make data driven recommendations on considering retiring products that are not contributing so that company’s resources can be utilized on other products efficiently. The buckets are as follows.
+As a business analyst, I’ve defined the scope of the exercise. It includes creating a mechanism to identify products that make financial sense for the company and identify the ones that do not. I’ve made three buckets in which products need to be categorized. The purpose of 'bucketing' products is to make data driven recommendations on whether or not to retire products that are not contributing, so that company’s resources can be utilized on other products efficiently. The buckets are as follows.
 
 1.	Top contributor – Products with high sales and high margin
 2.	Bottom contributor – Products with low sales and low margin
@@ -22,7 +22,7 @@ The three buckets form part of the requirements. Following are the requirements 
 ![image](https://user-images.githubusercontent.com/114446174/193912846-391c437a-d6f4-4ba4-ac25-bb49128063ea.png)
 
 ## **Data availability**
-Since customer information is sensitive, the data resides in company’s secured SQL server. I have been granted a read access to the SQL database to perform analysis. The sales information is available in a fact table named “dbo.FactInternetSales”. In addition to SQL database, I am going to use an excel sheet that contains mapping of products to product categories
+Since customer information is sensitive, the data resides in company’s secured SQL server. I have been granted a read only access to the SQL database to perform analysis. The sales information is available in the fact table named “dbo.FactInternetSales”. In addition to SQL database, I am going to use an excel sheet that contains mapping of products to product categories
 
 # **Pre-requisites**
 Apart from the pre-installed Microsoft Office Suite, we need to install 2 important softwares.
